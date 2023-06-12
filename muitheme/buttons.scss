@@ -1,0 +1,55 @@
+@import "palette";
+/*
+Avoid the usage of global overrides or sx in Material-UI themes, if the user
+add custom values for these props in their components, the components will loose every style.
+Custom color support can be implemented using attr function and initial colors svg api
+*/
+
+.MuiButton {
+    // check if its suitable to set base button text color to contrast 1.
+    // evaluate if its suitable to set default button background color to bg 2
+    &-root {
+        @apply rounded-lg capitalize border-2;
+        // &:not([class*='text']) {
+        //     @apply text-gray-700
+        // }
+    }
+    // variants
+    &-text {
+        &:hover { @apply bg-gray-200 }
+        &Primary {
+            @apply text-primary;
+        }
+    }
+    &-icon {
+        @apply p-1 rounded-full min-w-min aspect-square
+    }
+    &-contained, &-icon {
+        @apply shadow-none;
+        &:hover { @apply shadow-none }
+        &.dark { @apply text-white }
+        &Default {
+            @apply bg-red-300/10
+        }
+        &Primary {
+            @apply bg-primary text-white;
+            &:hover { @apply bg-primary-accent }
+        }
+        // &:not([class*='bg']):not([class^='Primary']) { @apply bg-gray-200 }
+    }
+    &-outlined  {
+        @apply border-black/10 text-1;
+        &:hover { @apply text-primary border-primary border-2 }
+        &Primary {
+            @apply text-primary border-current;
+            &:hover { @apply bg-primary text-white }
+        }
+    }
+    // sizes
+    &-sizeLarge {
+        @apply px-6 rounded-lg
+    }
+    &-sizeSmall {
+        @apply px-3;
+    }
+}

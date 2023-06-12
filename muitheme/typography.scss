@@ -1,0 +1,30 @@
+@import "palette";
+//should remove that page
+.MuiTypography-root, .MuiSvgIcon-root { @extend .text-1 }
+
+.MuiTypography-heading {
+    font-size: 6em;
+    @apply font-extrabold tracking-tighter block;
+}
+
+.MuiTypography-subheading {
+    font-size: 4.5em;
+    @apply font-extrabold tracking-tighter block;
+}
+
+.MuiTypography-title {
+    font-size: 2em;
+    @apply font-bold tracking-tighter block;
+}
+
+.MuiTypography-article {
+    @apply text-lg tracking-wide block;
+}
+
+.MuiTypography-caption {
+    @apply font-extrabold tracking-tighter block;
+}
+
+.MuiTypography-blockquote {
+    @apply text-lg font-light italic text-base block;
+}

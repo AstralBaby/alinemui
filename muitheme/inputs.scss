@@ -1,0 +1,85 @@
+.MuiInputBase-root {
+    @apply rounded-md shadow-sm leading-6;
+    fieldset {
+        @apply border-slate-900/10 border-2;
+    }
+    &.Mui-focused {
+        @apply shadow-sm;
+        fieldset.MuiOutlinedInput-notchedOutline {
+            @apply border-primary;
+        }
+    }
+    &:hover,.MuiOutlinedInput-root:hover {
+        fieldset,.MuiOutlinedInput-notchedOutline {
+            @apply ring-2 ring-primary/60 border-gray-200
+        }
+    }
+    &.MuiOutlinedInput-root{
+        @apply ring-0 shadow-none outline-none
+    }
+    &.MuiFilledInput-root{
+        .MuiFilledInput-input  {
+            @apply pt-3
+        }
+        @apply shadow-none
+    }
+}
+
+.dark .MuiInputLabel-root { @apply text-white}
+.dark .MuiInputBase-root {
+    &.MuiFilledInput-root{ @apply bg-white/10 }
+    &:hover{ @apply bg-white/10 }
+    fieldset {
+        @apply border-white/20;
+        // FLOATING LABEL
+        // legend span {
+        //     @apply text-white;
+        // }
+
+    }
+    &:hover,.MuiOutlinedInput-root:hover > fieldset {
+        @apply border-blue-300 ring-primary
+    }
+}
+
+
+.MuiCheckbox-root{
+    .MuiSvgIcon-root {
+        @apply fill-gray-300
+    }
+    &.Mui-checked .MuiSvgIcon-root{
+        @apply fill-primary
+    }
+}
+.MuiAutocomplete-root {
+    .MuiOutlinedInput-root {
+        padding: 0 9px 0
+    }
+}
+
+// disable material label
+.MuiFormLabel-root[data-shrink=true] {
+    display: none;
+}
+
+// ARIA
+.MuiAutocomplete-listbox .MuiAutocomplete-option[aria-selected="true"]{
+    @apply bg-primary;
+}
+
+// for autocompletes and selects
+[aria-selected="true"]:not(:hover) {
+    .MuiListItemText-primary {
+        @apply text-white
+    }
+    .MuiListItemText-secondary {
+        @apply text-white
+    }
+}
+
+.quill {
+    @apply border border-gray-200 rounded-md;
+    &:focus-within { @apply ring-2 ring-primary }
+    .ql-container.ql-snow, .ql-toolbar.ql-snow { @apply border-none }
+    .ql-toolbar.ql-snow { @apply bg-slate-50 rounded-md }
+}

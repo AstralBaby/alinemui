@@ -1,0 +1,8 @@
+.MuiTab-root {
+    @apply capitalize text-gray-500;
+    &.Mui-selected { @apply text-slate-700 }
+}
+.MuiTabs-indicator {
+    height: 5px;
+    @apply rounded-full bg-primary-accent
+}

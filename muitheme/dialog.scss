@@ -1,0 +1,14 @@
+.MuiDialog-container {
+    .MuiPaper-root {
+        @apply rounded-lg shadow-xl text-gray-500;
+        .MuiDialogTitle-root {
+            @apply text-gray-600 border-b border-slate-100 text-base font-semibold
+        }
+    }
+    .MuiDialogContent-root {
+        @apply p-5
+    }
+    .MuiDialogActions-root {
+        @apply border-t border-slate-100
+    }
+}

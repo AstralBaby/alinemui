@@ -1,0 +1,28 @@
+.MuiAvatar-root {
+    @apply text-gray-700;
+    // default colors, if not custom tailwind color.
+    &.MuiAvatar-colorDefault:not([class*='bg']) {
+        @apply bg-black/10;
+        .MuiAvatar-fallback {
+            @apply text-black/30
+        }
+        .MuiSvgIcon-root {
+            @apply text-black/30
+        }
+    }
+    &[class*='bg'] {
+        @apply text-white
+    }
+}
+.dark .MuiAvatar-root {
+    @apply text-white;
+    &.MuiAvatar-colorDefault:not([class*='bg']) {
+        @apply bg-white/10;
+        .MuiAvatar-fallback {
+            @apply text-white/30
+        }
+        .MuiSvgIcon-root {
+            @apply text-white/30
+        }
+    }
+}

@@ -1,0 +1,5 @@
+.MuiMenu,.MuiAutocomplete {
+    &-paper {
+        @apply border rounded-lg border-gray-200 shadow-xl shadow-black/5 mt-1 bg-white
+    }
+}

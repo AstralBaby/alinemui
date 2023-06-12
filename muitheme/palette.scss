@@ -1,0 +1,31 @@
+
+.text-1 { @apply text-slate-700 }
+.text-2 { @apply text-slate-600 }
+.text-3 { @apply text-slate-500 }
+.text-4 { @apply text-slate-400 }
+
+.bg-accent { @apply bg-black/10 }
+
+.bg {
+    &-1 { @apply bg-white }
+    &-2 { @apply bg-zinc-50 }
+    &-3 { @apply bg-zinc-100 }
+    &-4 { @apply bg-zinc-200 }
+}
+
+.dark {
+    .text, &.text {
+        &-1 { @apply text-stone-100 }
+        &-2 { @apply text-stone-200 }
+        &-3 { @apply text-stone-300 }
+        &-4 { @apply text-stone-400 }
+    }
+
+    .bg, &.bg {
+        &-1 { @apply bg-zinc-600 }
+        &-2 { @apply bg-zinc-700 }
+        &-3 { @apply bg-zinc-800 }
+        &-4 { @apply bg-zinc-900 }
+    }
+}
+
