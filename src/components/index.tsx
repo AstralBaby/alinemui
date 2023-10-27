@@ -1,4 +1,4 @@
-import ListGroup from "./ListGroup.tsx"
+import ListGroup from "./ListGroup"
 import Avatar from "./Avatar"
 
 export {

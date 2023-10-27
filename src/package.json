@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "MaterialUI theme.",
   "packageManager": "yarn@3.3.0",
-  "main": "dist/index.mjs",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "keywords": [
     "mui",
     "materialui",
@@ -21,14 +21,8 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.14",
-    "@mui/material": "^5.14.14",
-    "@tailwindcss/typography": "^0.5.10",
-    "@types/node": "20.8.6",
     "@types/react": "^18.2.11",
     "autoprefixer": "^10.4.14",
-    "chokidar": "^3.5.3",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
@@ -41,13 +35,5 @@
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.2",
     "react": "^18.2.0"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@fontsource/inter": "^5.0.13",
-    "@geoffcodesthings/tailwind-md-base": "^1.1.0",
-    "esbuild": "^0.19.4",
-    "esbuild-sass-plugin": "^2.16.0",
-    "postcss": "^8.4.31"
   }
 }

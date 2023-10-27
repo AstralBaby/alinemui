@@ -1,0 +1,17 @@
+.MuiTableContainer-root {
+    @apply border border-gray-200 rounded-lg;
+    .MuiTableHead-root {
+        @apply bg-gray-50 p-3;
+        .MuiTableCell-head {
+            @apply border-gray-200 text-gray-700 font-bold shadow-none
+        }
+    }
+    .MuiTableBody-root .MuiTableRow-root {
+        .MuiTableCell-root {
+            @apply text-gray-600 border-gray-100
+    }
+        // &.stripped:nth-child(even) {
+        //     @apply bg-slate-50
+        // }
+    }
+}

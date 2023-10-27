@@ -1,7 +1,20 @@
+.MuiFormControl-root {
+    @apply align-middle
+}
+.MuiInputLabel-root {
+    @apply font-medium;
+    &.Mui-focused {
+        @apply text-gray-700 font-medium
+    }
+}
+.MuiInputLabel-outlined {
+    @apply transform-none -mt-6 text-sm 
+}
 .MuiInputBase-root {
     @apply rounded-md shadow-sm leading-6;
     fieldset {
-        @apply border-slate-900/10 border-2;
+        //shadow-slate-50
+        @apply border-gray-200 border shadow-sm shadow-slate-50;
     }
     &.Mui-focused {
         @apply shadow-sm;
@@ -18,8 +31,8 @@
         @apply ring-0 shadow-none outline-none
     }
     &.MuiFilledInput-root{
+        @apply bg-gray-100;
         .MuiFilledInput-input  {
-            @apply pt-3
         }
         @apply shadow-none
     }
@@ -59,7 +72,6 @@
 
 // disable material label
 .MuiFormLabel-root[data-shrink=true] {
-    display: none;
 }
 
 // ARIA

@@ -1,0 +1,20 @@
+.MuiMenuItem-root {
+    @apply px-2;
+}
+.MuiListItem-button,.MuiListItemButton-root {
+    @apply px-2;
+}
+.MuiListItemText-root .MuiTypography-root {
+    @apply font-medium
+}
+.MuiListItemIcon-root {
+    @apply min-w-0 mr-3
+}
+.AlnListGroup {
+    .MuiListItemButton-root {
+        @apply pl-5;
+        .MuiTypography-root {
+            @apply font-normal
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+.MuiStepIcon-root {
+    @apply rounded-full border-2 border-gray-200 text-4xl;
+    &:not([data-testid]) {
+        @apply fill-white;
+        text {
+            @apply fill-gray-500 font-bold
+        }
+    }
+}
+.MuiStepLabel-iconContainer {
+    &.Mui-active {
+        .MuiStepIcon-root {
+            @apply border-primary ring-2 ring-primary/30
+        }
+    }
+    &.Mui-completed {
+        .MuiStepIcon-root {
+            @apply border-none
+        }
+    }
+}
+
+.MuiStepConnector-root {
+    top: 15px;
+    .MuiStepConnector-line {
+        @apply border border-gray-200 rounded-full
+    }
+    &.Mui-active .MuiStepConnector-line {
+        @apply border-primary-accent
+    }
+}
+

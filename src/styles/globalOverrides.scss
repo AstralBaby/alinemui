@@ -1,5 +1,7 @@
 @import "palette";
-
+html {
+    font-size: 15px;
+}
 a { @apply text-sky-500 cursor-pointer }
 // List items text
 .MuiListItemText-primary {
@@ -11,11 +13,11 @@ a { @apply text-sky-500 cursor-pointer }
 
 .MuiPaper {
     //consider removing a default text color
-    &-root { @apply text-1 }
+    // &-root { @apply text-1 }
     &-elevation { @apply shadow-none }
-    &-elevation1 { @apply bg-3 }
+    &-elevation1 { @apply bg-1 }
     &-elevation2 { @apply bg-2 }
-    &-elevation3 { @apply bg-1 }
+    &-elevation3 { @apply bg-3 }
 }
 
 

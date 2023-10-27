@@ -28,7 +28,7 @@ Custom color support can be implemented using attr function and initial colors s
         @apply shadow-none;
         &:hover { @apply shadow-none }
         &.dark { @apply text-white }
-        &Default {
+        &Secondary {
             @apply bg-red-300/10
         }
         &Primary {
@@ -43,6 +43,9 @@ Custom color support can be implemented using attr function and initial colors s
         &Primary {
             @apply text-primary border-current;
             &:hover { @apply bg-primary text-white }
+        }
+        &Secondary {
+            @apply bg-red-300
         }
     }
     // sizes

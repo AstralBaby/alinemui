@@ -1,8 +1,14 @@
 import React from "react"
-import { Avatar as MuiAvatar } from "@mui/material"
+import { Avatar as MuiAvatar, AvatarTypeMap } from "@mui/material"
 
 //transform this file into ts and add props types
-export default function Avatar(props) {
+
+export interface AvatarProps extends AvatarTypeMap{
+  alt: string,
+  size: number
+}
+
+export default function Avatar(props: AvatarProps) {
     function getColor() {
         let colors = ['purple', 'orange', 'pink', 'sky', 'indigo']
         return colors[Math.floor(props.alt.length / colors.length)]
