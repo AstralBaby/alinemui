@@ -1,0 +1,28 @@
+import { Stepper, Step, StepLabel } from "@mui/material"
+
+# Stepper
+<Stepper activeStep={1}>
+    <Step>
+      <StepLabel>Shipping address</StepLabel>
+    </Step>
+    <Step>
+      <StepLabel>Billing details</StepLabel>
+    </Step>
+    <Step>
+      <StepLabel>Checkout</StepLabel>
+    </Step>
+</Stepper>
+
+# Demo 2
+
+<Stepper activeStep={null} alternativeLabel={false}>
+    <Step>
+      <StepLabel>Shipping address</StepLabel>
+    </Step>
+    <Step>
+      <StepLabel>Billing details</StepLabel>
+    </Step>
+    <Step>
+      <StepLabel>Checkout</StepLabel>
+    </Step>
+</Stepper>
