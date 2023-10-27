@@ -4,12 +4,12 @@ html {
 }
 a { @apply text-sky-500 cursor-pointer }
 // List items text
-.MuiListItemText-primary {
-    @extend .text-2;
-} 
-.MuiListItemText-secondary {
-    @extend .text-3;
-}
+// .MuiListItemText-primary {
+//     @extend .text-2;
+// } 
+// .MuiListItemText-secondary {
+//     @extend .text-3;
+// }
 
 .MuiPaper {
     //consider removing a default text color
