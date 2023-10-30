@@ -16,7 +16,7 @@
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{display: 'flex'}}>
+      <Box sx={{display: 'flex'}} className="h-screen">
       <AppBar
         position="fixed"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -48,9 +48,10 @@
       </Drawer>
       <Box
         component="main"
-        className='prose max-w-full'
+        className='prose max-w-full dark:prose-invert h-100'
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
+        {/* evaluar si es mejor pasar por sx los bordes dinamicos etc  */}
         <Toolbar></Toolbar>
         <MDXProvider components={components}>
           {children}

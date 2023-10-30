@@ -507,13 +507,14 @@ function Avatar(props) {
 }
 
 // src/useTheme.ts
-import { useMemo, useState as useState2 } from "react";
+import { useEffect, useMemo, useState as useState2 } from "react";
 
 // src/palette.ts
 import { createTheme } from "@mui/material";
 
 // tailwind.config.cjs
 var tailwind_config_default = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "src/components/**/*.{js,ts,jsx,tsx}"
@@ -665,6 +666,13 @@ var theme_default = theme;
 // src/useTheme.ts
 var useTheme = () => {
   const [mode, setMode] = useState2("light");
+  useEffect(() => {
+    const root = document.documentElement;
+    if (mode === "dark")
+      root.classList.add("dark");
+    else
+      root.classList.remove("dark");
+  }, [mode]);
   const theme2 = useMemo(() => createTheme2({
     palette: mode === "dark" ? DarkPalette : LightPalette,
     ...theme_default

@@ -1,5 +1,7 @@
 .MuiMenu,.MuiAutocomplete {
     &-paper {
-        @apply border rounded-lg border-gray-200 shadow-xl shadow-black/5 mt-1 bg-white
+        @apply border rounded-lg border-gray-900/10 shadow-xl shadow-black/5 mt-1;
+        //bg-white border-gray-200
+        // lighter borders with dark mode
     }
 }

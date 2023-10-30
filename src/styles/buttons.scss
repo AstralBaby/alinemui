@@ -25,9 +25,8 @@ Custom color support can be implemented using attr function and initial colors s
         @apply p-1 rounded-full min-w-min aspect-square
     }
     &-contained, &-icon {
-        @apply shadow-none;
+        @apply shadow-none dark:text-white;
         &:hover { @apply shadow-none }
-        &.dark { @apply text-white }
         &Secondary {
             @apply bg-red-300/10
         }
@@ -38,15 +37,15 @@ Custom color support can be implemented using attr function and initial colors s
         // &:not([class*='bg']):not([class^='Primary']) { @apply bg-gray-200 }
     }
     &-outlined  {
-        @apply border-black/10 text-1;
+        @apply border-black/10 dark:border-white/10 text-1;
         &:hover { @apply text-primary border-primary border-2 }
         &Primary {
             @apply text-primary border-current;
             &:hover { @apply bg-primary text-white }
         }
-        &Secondary {
-            @apply bg-red-300
-        }
+        // &Secondary {
+        //     @apply bg-red-300
+        // }
     }
     // sizes
     &-sizeLarge {
@@ -56,3 +55,5 @@ Custom color support can be implemented using attr function and initial colors s
         @apply px-3;
     }
 }
+
+// remove all text utility classes and hardcoded primary colors.

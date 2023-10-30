@@ -1,4 +1,5 @@
 const config = {
+  darkMode: "class",
   plugins: [require('@tailwindcss/typography')],
   content: [
     "./*.{js.,ts,jsx,tsx}",

@@ -2,19 +2,23 @@
     @apply align-middle
 }
 .MuiInputLabel-root {
-    @apply font-medium;
+    @apply font-medium dark:text-gray-200;
     &.Mui-focused {
-        @apply text-gray-700 font-medium
+        @apply text-gray-700 dark:text-white font-medium
     }
 }
 .MuiInputLabel-outlined {
     @apply transform-none -mt-6 text-sm 
 }
+
 .MuiInputBase-root {
     @apply rounded-md shadow-sm leading-6;
     fieldset {
         //shadow-slate-50
-        @apply border-gray-200 border shadow-sm shadow-slate-50;
+        @apply border-gray-200 dark:border-gray-400 border shadow-sm shadow-slate-50 dark:shadow-slate-900;
+        legend span {
+            @apply dark:text-white;
+        }
     }
     &.Mui-focused {
         @apply shadow-sm;
@@ -23,36 +27,38 @@
         }
     }
     &:hover,.MuiOutlinedInput-root:hover {
+        // cual es la diferencia entre el base y el outline? evaluar.
+        &:hover{ @apply dark:bg-white/10 }
         fieldset,.MuiOutlinedInput-notchedOutline {
-            @apply ring-2 ring-primary/60 border-gray-200
+            @apply ring-2 ring-primary/60  dark:border-gray-400;
+            //border-gray-200
         }
     }
     &.MuiOutlinedInput-root{
         @apply ring-0 shadow-none outline-none
     }
     &.MuiFilledInput-root{
-        @apply bg-gray-100;
+        @apply bg-gray-100 dark:bg-white/10;
         .MuiFilledInput-input  {
         }
         @apply shadow-none
     }
 }
 
-.dark .MuiInputLabel-root { @apply text-white}
+// .dark .MuiInputLabel-root { @apply text-white}
 .dark .MuiInputBase-root {
-    &.MuiFilledInput-root{ @apply bg-white/10 }
+    // &.MuiFilledInput-root{ @apply bg-white/10 }
     &:hover{ @apply bg-white/10 }
     fieldset {
-        @apply border-white/20;
         // FLOATING LABEL
         // legend span {
         //     @apply text-white;
         // }
 
     }
-    &:hover,.MuiOutlinedInput-root:hover > fieldset {
-        @apply border-blue-300 ring-primary
-    }
+    // &:hover,.MuiOutlinedInput-root:hover > fieldset {
+    //     @apply border-blue-300 ring-primary
+    // }
 }
 
 

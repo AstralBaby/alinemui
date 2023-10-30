@@ -1,6 +1,7 @@
 // Delegar css de colores a MATERIALUI.
 // Mapear colores desde tailwind
 export default {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "src/components/**/*.{js,ts,jsx,tsx}",
