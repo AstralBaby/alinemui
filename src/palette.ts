@@ -19,8 +19,8 @@ const createColor = (base: string) => augmentColor({ color: { main: base } });
 const LightPalette: ThemeOptions["palette"] = {
     mode: "light",
     primary: {
-        main: extend.colors.primary.DEFAULT,
-        light: extend.colors.primary.accent
+        main: colors.blue[600],
+        light: colors.blue[700]
     },
     secondary: {
         light: colors.gray[100],
@@ -42,8 +42,8 @@ const LightPalette: ThemeOptions["palette"] = {
 const DarkPalette: ThemeOptions["palette"] = {
     mode: "dark",
     primary: {
-        main: extend.colors.primary.DEFAULT,
-        light: extend.colors.primary.accent,
+        main: colors.blue[600],
+        light: colors.blue[700],
         contrastText: colors.white
     },
     secondary: {

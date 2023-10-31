@@ -65,12 +65,18 @@ const theme = {
     // Fix for use with tailwind.
       styleOverrides: {
         root: ({ownerState, theme}) => {
-          return ownerState.variant === "contained"
-          && {
+          if (ownerState.variant === "contained")
+          return {
             "&:not(:hover)": {
               backgroundColor: theme.palette[ownerState.color].main + " !important"
             }
-          } 
+          }
+          if (ownerState.variant === "outlined")
+          return {
+            color: theme.palette.text.primary,
+            "&:hover": { color: theme.palette[ownerState.color].main },
+            // ":is(.dark &)": { color: theme.palette[ownerState.color].main }
+          }
         }
       },
       defaultProps: {

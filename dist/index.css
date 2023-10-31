@@ -80,8 +80,10 @@
   text-transform: capitalize;
 }
 .MuiButton-text:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(107 114 128 / 0.1);
+}
+:is(.dark .MuiButton-text:hover) {
+  background-color: rgb(209 213 219 / 0.1);
 }
 .MuiButton-icon {
   aspect-ratio: 1 / 1;
@@ -123,41 +125,12 @@
 }
 .MuiButton-outlined {
   border-color: rgb(0 0 0 / 0.1);
-  --tw-text-opacity: 1;
-  color: rgb(51 65 85 / var(--tw-text-opacity));
-}
-.dark .MuiButton-outlined,
-.dark.MuiButton-outlined {
-  --tw-text-opacity: 1;
-  color: rgb(245 245 244 / var(--tw-text-opacity));
-}
-.MuiButton-outlined {
-  --tw-text-opacity: 1;
-  color: rgb(51 65 85 / var(--tw-text-opacity));
-}
-.dark .MuiButton-outlined,
-.dark.MuiButton-outlined {
-  --tw-text-opacity: 1;
-  color: rgb(245 245 244 / var(--tw-text-opacity));
-}
-.MuiButton-outlined {
-  --tw-text-opacity: 1;
-  color: rgb(51 65 85 / var(--tw-text-opacity));
-}
-.dark .MuiButton-outlined,
-.dark.MuiButton-outlined {
-  --tw-text-opacity: 1;
-  color: rgb(245 245 244 / var(--tw-text-opacity));
 }
 :is(.dark .MuiButton-outlined) {
   border-color: rgb(255 255 255 / 0.1);
 }
 .MuiButton-outlined:hover {
   border-width: 2px;
-}
-.MuiButton-outlinedPrimary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 .MuiButton-sizeLarge {
   border-radius: 0.5rem;

@@ -567,8 +567,8 @@ var { palette: { augmentColor } } = createTheme();
 var LightPalette = {
   mode: "light",
   primary: {
-    main: extend.colors.primary.DEFAULT,
-    light: extend.colors.primary.accent
+    main: import_colors.default.blue[600],
+    light: import_colors.default.blue[700]
   },
   secondary: {
     light: import_colors.default.gray[100],
@@ -587,8 +587,8 @@ var LightPalette = {
 var DarkPalette = {
   mode: "dark",
   primary: {
-    main: extend.colors.primary.DEFAULT,
-    light: extend.colors.primary.accent,
+    main: import_colors.default.blue[600],
+    light: import_colors.default.blue[700],
     contrastText: import_colors.default.white
   },
   secondary: {
@@ -636,11 +636,18 @@ var theme = {
       // Fix for use with tailwind.
       styleOverrides: {
         root: ({ ownerState, theme: theme2 }) => {
-          return ownerState.variant === "contained" && {
-            "&:not(:hover)": {
-              backgroundColor: theme2.palette[ownerState.color].main + " !important"
-            }
-          };
+          if (ownerState.variant === "contained")
+            return {
+              "&:not(:hover)": {
+                backgroundColor: theme2.palette[ownerState.color].main + " !important"
+              }
+            };
+          if (ownerState.variant === "outlined")
+            return {
+              color: theme2.palette.text.primary,
+              "&:hover": { color: theme2.palette[ownerState.color].main }
+              // ":is(.dark &)": { color: theme.palette[ownerState.color].main }
+            };
         }
       },
       defaultProps: {
