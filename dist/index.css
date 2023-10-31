@@ -75,7 +75,7 @@
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 .MuiButton-root {
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
   border-width: 2px;
   text-transform: capitalize;
 }

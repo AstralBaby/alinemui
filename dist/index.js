@@ -567,8 +567,8 @@ var { palette: { augmentColor } } = createTheme();
 var LightPalette = {
   mode: "light",
   primary: {
-    main: import_colors.default.blue[600],
-    light: import_colors.default.blue[700]
+    main: import_colors.default.blue[800],
+    light: import_colors.default.blue[600]
   },
   secondary: {
     light: import_colors.default.gray[100],
@@ -588,7 +588,7 @@ var DarkPalette = {
   mode: "dark",
   primary: {
     main: import_colors.default.blue[600],
-    light: import_colors.default.blue[700],
+    light: import_colors.default.blue[400],
     contrastText: import_colors.default.white
   },
   secondary: {
@@ -647,6 +647,11 @@ var theme = {
               color: theme2.palette.text.primary,
               "&:hover": { color: theme2.palette[ownerState.color].main }
               // ":is(.dark &)": { color: theme.palette[ownerState.color].main }
+            };
+          if (ownerState.variant === "text")
+            return {
+              color: theme2.palette.primary.light
+              // "&:hover": { color: theme.palette[ownerState.color].main },
             };
         }
       },

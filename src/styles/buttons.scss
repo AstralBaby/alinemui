@@ -9,7 +9,7 @@ Custom color support can be implemented using attr function and initial colors s
     // check if its suitable to set base button text color to contrast 1.
     // evaluate if its suitable to set default button background color to bg 2
     &-root {
-        @apply rounded-lg capitalize border-2;
+        @apply rounded-md capitalize border-2;
         // &:not([class*='text']) {
         //     @apply text-gray-700
         // }
@@ -22,7 +22,8 @@ Custom color support can be implemented using attr function and initial colors s
         }
     }
     &-icon {
-        @apply p-1 rounded-full min-w-min aspect-square
+        @apply p-1 rounded-full min-w-min aspect-square;
+        // to be removed
     }
     &-contained, &-icon {
         @apply shadow-none dark:text-white;

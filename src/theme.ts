@@ -77,6 +77,11 @@ const theme = {
             "&:hover": { color: theme.palette[ownerState.color].main },
             // ":is(.dark &)": { color: theme.palette[ownerState.color].main }
           }
+          if (ownerState.variant === "text")
+          return {
+            color: theme.palette.primary.light,
+            // "&:hover": { color: theme.palette[ownerState.color].main },
+          }
         }
       },
       defaultProps: {
