@@ -515,6 +515,9 @@ import { createTheme } from "@mui/material";
 // tailwind.config.cjs
 var tailwind_config_default = {
   darkMode: "class",
+  corePlugins: {
+    preflight: false
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "src/components/**/*.{js,ts,jsx,tsx}"
@@ -630,13 +633,23 @@ var theme = {
       }
     },
     MuiButton: {
+      // Fix for use with tailwind.
+      styleOverrides: {
+        root: ({ ownerState, theme: theme2 }) => {
+          return ownerState.variant === "contained" && {
+            "&:not(:hover)": {
+              backgroundColor: theme2.palette[ownerState.color].main + " !important"
+            }
+          };
+        }
+      },
       defaultProps: {
         variant: "contained"
       }
     },
     MuiButtonBase: {
       defaultProps: {
-        color: "secondary"
+        // color: "secondary"
       }
     },
     MuiInputBase: {

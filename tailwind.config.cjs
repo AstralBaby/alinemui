@@ -2,6 +2,9 @@
 // Mapear colores desde tailwind
 export default {
   darkMode: "class",
+  corePlugins: {
+    preflight: false
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "src/components/**/*.{js,ts,jsx,tsx}",

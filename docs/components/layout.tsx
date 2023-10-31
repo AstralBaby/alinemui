@@ -1,8 +1,8 @@
   import type { NextraThemeLayoutProps, PageMapItem } from 'nextra'
-  import { AppBar, Box, Button, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, TextField, Toolbar, Typography } from "@mui/material"
+  import { AppBar, Box, Button, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, StyledEngineProvider, TextField, Toolbar, Typography } from "@mui/material"
   import '../../dist/index.css'
   import { ThemeProvider } from '@mui/material'
-  import { ListGroup, theme, useTheme } from "../../dist/index"
+  import { ListGroup, useTheme } from "../../dist/index"
   import '@fontsource/inter';
   import '@fontsource/inter/500.css';
   import '@fontsource/inter/600.css';
@@ -14,7 +14,7 @@
  export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
   const { theme, setMode } = useTheme()
 
-  return (
+  return (    
     <ThemeProvider theme={theme}>
       <Box sx={{display: 'flex'}} className="h-screen">
       <AppBar

@@ -62,13 +62,24 @@ const theme = {
       } as const
     },
     MuiButton: {
+    // Fix for use with tailwind.
+      styleOverrides: {
+        root: ({ownerState, theme}) => {
+          return ownerState.variant === "contained"
+          && {
+            "&:not(:hover)": {
+              backgroundColor: theme.palette[ownerState.color].main + " !important"
+            }
+          } 
+        }
+      },
       defaultProps: {
         variant: "contained"
       } as const
     },
     MuiButtonBase: {
       defaultProps: {
-        color: "secondary"
+        // color: "secondary"
       } as const,
     },
     MuiInputBase: {

@@ -18,7 +18,7 @@ Custom color support can be implemented using attr function and initial colors s
     &-text {
         &:hover { @apply bg-gray-200 }
         &Primary {
-            @apply text-primary;
+            //bg-primary
         }
     }
     &-icon {
@@ -31,17 +31,21 @@ Custom color support can be implemented using attr function and initial colors s
             @apply bg-red-300/10
         }
         &Primary {
-            @apply bg-primary text-white;
-            &:hover { @apply bg-primary-accent }
+            @apply text-white;
+            //bg-primary
+            // &:hover { @apply bg-primary-accent }
         }
         // &:not([class*='bg']):not([class^='Primary']) { @apply bg-gray-200 }
     }
     &-outlined  {
         @apply border-black/10 dark:border-white/10 text-1;
-        &:hover { @apply text-primary border-primary border-2 }
+        &:hover { @apply border-2 }
+        //text-primary border-primary
         &Primary {
-            @apply text-primary border-current;
-            &:hover { @apply bg-primary text-white }
+            // @apply border-current;
+            //text-primary
+            &:hover { @apply text-primary }
+            //to preserve the essence of the outlined button the background on hover is removed.
         }
         // &Secondary {
         //     @apply bg-red-300

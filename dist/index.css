@@ -83,10 +83,6 @@
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-.MuiButton-textPrimary {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
 .MuiButton-icon {
   aspect-ratio: 1 / 1;
   min-width: min-content;
@@ -122,15 +118,8 @@
 }
 .MuiButton-containedPrimary,
 .MuiButton-iconPrimary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.MuiButton-containedPrimary:hover,
-.MuiButton-iconPrimary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 .MuiButton-outlined {
   border-color: rgb(0 0 0 / 0.1);
@@ -165,21 +154,10 @@
 }
 .MuiButton-outlined:hover {
   border-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-.MuiButton-outlinedPrimary {
-  border-color: currentColor;
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 .MuiButton-outlinedPrimary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 .MuiButton-sizeLarge {
   border-radius: 0.5rem;
