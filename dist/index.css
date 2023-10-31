@@ -156,6 +156,10 @@
   --tw-shadow-color: rgb(0 0 0 / 0.05);
   --tw-shadow: var(--tw-shadow-colored);
 }
+:is(.dark .MuiMenu-paper),
+:is(.dark .MuiAutocomplete-paper) {
+  border-color: rgb(243 244 246 / 0.1);
+}
 .MuiFormControl-root {
   vertical-align: middle;
 }
@@ -206,7 +210,7 @@
 }
 :is(.dark .MuiInputBase-root fieldset) {
   --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+  border-color: rgb(115 115 115 / var(--tw-border-opacity));
   --tw-shadow-color: #0f172a;
   --tw-shadow: var(--tw-shadow-colored);
 }
@@ -414,10 +418,18 @@
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
+:is(.dark .MuiTableContainer-root) {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
 .MuiTableContainer-root .MuiTableHead-root {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
   padding: 0.75rem;
+}
+:is(.dark .MuiTableContainer-root .MuiTableHead-root) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
 }
 .MuiTableContainer-root .MuiTableHead-root .MuiTableCell-head {
   --tw-border-opacity: 1;
@@ -432,11 +444,23 @@
     var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow);
 }
+:is(.dark .MuiTableContainer-root .MuiTableHead-root .MuiTableCell-head) {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 82 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity));
+}
 .MuiTableContainer-root .MuiTableBody-root .MuiTableRow-root .MuiTableCell-root {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+:is(.dark .MuiTableContainer-root .MuiTableBody-root .MuiTableRow-root .MuiTableCell-root) {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 82 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 .MuiDialog-container .MuiPaper-root {
   border-radius: 0.5rem;
@@ -700,87 +724,6 @@ a {
     var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow);
-}
-.MuiPaper-elevation1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation1,
-.dark.MuiPaper-elevation1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation1,
-.dark.MuiPaper-elevation1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation1,
-.dark.MuiPaper-elevation1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation2,
-.dark.MuiPaper-elevation2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation2,
-.dark.MuiPaper-elevation2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation2,
-.dark.MuiPaper-elevation2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation3,
-.dark.MuiPaper-elevation3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation3,
-.dark.MuiPaper-elevation3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-.MuiPaper-elevation3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
-}
-.dark .MuiPaper-elevation3,
-.dark.MuiPaper-elevation3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 .dark a {
   --tw-text-opacity: 1;

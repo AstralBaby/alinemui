@@ -15,7 +15,7 @@
     @apply rounded-md shadow-sm leading-6;
     fieldset {
         //shadow-slate-50
-        @apply border-gray-200 dark:border-gray-400 border shadow-sm shadow-slate-50 dark:shadow-slate-900;
+        @apply border-gray-200 dark:border-neutral-500 border shadow-sm shadow-slate-50 dark:shadow-slate-900;
         legend span {
             @apply dark:text-white;
         }
