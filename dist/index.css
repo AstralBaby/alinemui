@@ -284,6 +284,9 @@
     var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow);
 }
+.MuiInputBase-root.MuiInput-underline::before {
+  border-bottom-width: 2px;
+}
 .dark .MuiInputBase-root:hover {
   background-color: rgb(255 255 255 / 0.1);
 }

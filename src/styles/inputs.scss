@@ -43,6 +43,10 @@
         }
         @apply shadow-none
     }
+    
+    &.MuiInput-underline::before{
+        @apply border-b-2
+    }
 }
 
 // .dark .MuiInputLabel-root { @apply text-white}
