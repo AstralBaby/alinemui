@@ -1,22 +1,22 @@
   import type { NextraThemeLayoutProps, PageMapItem } from 'nextra'
   import { AppBar, Box, Button, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, StyledEngineProvider, TextField, Toolbar, Typography } from "@mui/material"
-  import '../../dist/index.css'
-  import { ThemeProvider } from '@mui/material'
   import { ListGroup, useTheme } from "../../dist/index"
-  import '@fontsource/inter';
-  import '@fontsource/inter/500.css';
-  import '@fontsource/inter/600.css';
-  import '@fontsource/inter/700.css';
   import { useRouter } from 'next/router'
   import { MDXProvider } from 'nextra/mdx'
   import components from "nextra/components"
+  import { useEffect, useState } from 'react'
 
  export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
-  const { theme, setMode } = useTheme()
+  const { setMode } = useTheme()
+
+  const meta = pageOpts.pageMap[pageOpts.pageMap.length - 1].data
+
+  useEffect(() => {
+    console.log(pageOpts)
+  }, [])
 
   return (    
-    <ThemeProvider theme={theme}>
-      <Box sx={{display: 'flex'}} className="h-screen">
+    <Box sx={{display: 'flex'}} className="h-screen">
       <AppBar
         position="fixed"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -40,7 +40,7 @@
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
-            {pageOpts.pageMap.map(item => <ListElement item={item} />)}
+            {pageOpts.pageMap.map(item => <ListElement item={item} meta={meta[item.name]} />)}
           </List>
           <Divider />
 
@@ -58,15 +58,15 @@
         </MDXProvider>
       </Box>
     </Box>
-    </ThemeProvider>
   )
 }
 
-const ListElement = ({item}: {item: PageMapItem}) => {
+const ListElement = ({item, meta}: {item: PageMapItem, meta: string | object}) => {
   const router = useRouter()
+  const title = meta?.title || meta || item.name
 
   if(item.kind === "Folder")
-  return <ListGroup label={item.name}>
+  return <ListGroup label={title}>
     {item.children.map((child, idx) => child.kind === "MdxPage" &&
       <ListItemButton key={idx} onClick={() => router.push(child.route)}>
         <ListItemText primary={child.name} />
@@ -77,7 +77,7 @@ const ListElement = ({item}: {item: PageMapItem}) => {
   if(item.kind === "MdxPage")
   return <ListItem disablePadding>
     <ListItemButton onClick={() => router.push(item.route)}>
-      <ListItemText primary={item.name} />
+      <ListItemText primary={title} />
     </ListItemButton>
   </ListItem>
 }

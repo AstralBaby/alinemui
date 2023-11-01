@@ -506,8 +506,9 @@ function Avatar(props) {
   return /* @__PURE__ */ React2.createElement(MuiAvatar, { ...computedProps });
 }
 
-// src/useTheme.ts
-import { useEffect, useMemo, useState as useState2 } from "react";
+// src/useTheme.tsx
+import React3 from "react";
+import { useContext, useEffect, useMemo, useState as useState2 } from "react";
 
 // src/palette.ts
 import { createTheme } from "@mui/material";
@@ -607,8 +608,8 @@ var DarkPalette = {
   }
 };
 
-// src/useTheme.ts
-import { createTheme as createTheme2 } from "@mui/material";
+// src/useTheme.tsx
+import { ThemeProvider, createTheme as createTheme2 } from "@mui/material";
 
 // src/theme.ts
 var theme = {
@@ -694,8 +695,17 @@ var theme = {
 };
 var theme_default = theme;
 
-// src/useTheme.ts
+// src/useTheme.tsx
+import { createContext } from "react";
 var useTheme = () => {
+  const { mode, setMode } = useContext(AlineContext);
+  return {
+    mode,
+    setMode
+  };
+};
+var AlineContext = createContext(void 0);
+var AlineProvider = ({ children }) => {
   const [mode, setMode] = useState2("light");
   useEffect(() => {
     const root = document.documentElement;
@@ -708,15 +718,11 @@ var useTheme = () => {
     palette: mode === "dark" ? DarkPalette : LightPalette,
     ...theme_default
   }), [mode]);
-  return {
-    mode,
-    setMode,
-    theme: theme2
-  };
+  return /* @__PURE__ */ React3.createElement(AlineContext.Provider, { value: { mode, setMode } }, /* @__PURE__ */ React3.createElement(ThemeProvider, { theme: theme2 }, children));
 };
-var useTheme_default = useTheme;
 export {
+  AlineProvider,
   Avatar,
   ListGroup,
-  useTheme_default as useTheme
+  useTheme
 };
