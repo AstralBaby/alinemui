@@ -475,9 +475,11 @@
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity));
-  font-size: 1rem;
-  line-height: 1.5rem;
   font-weight: 600;
+}
+:is(.dark .MuiDialog-container .MuiPaper-root .MuiDialogTitle-root) {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 82 / var(--tw-border-opacity));
 }
 .MuiDialog-container .MuiDialogContent-root {
   padding: 1.25rem;
@@ -486,6 +488,10 @@
   border-top-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity));
+}
+:is(.dark .MuiDialog-container .MuiDialogActions-root) {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 82 / var(--tw-border-opacity));
 }
 .MuiAvatar-root {
   --tw-text-opacity: 1;
