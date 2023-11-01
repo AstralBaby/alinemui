@@ -112,6 +112,12 @@ const theme = {
       defaultProps: {
         alternativeLabel: true
       }
+    },
+    MuiPagination: {
+      defaultProps: {
+        shape: "rounded",
+        color: "primary"
+      }
     }
   }
 };

@@ -567,7 +567,7 @@ var { palette: { augmentColor } } = createTheme();
 var LightPalette = {
   mode: "light",
   primary: {
-    main: import_colors.default.blue[800],
+    main: import_colors.default.blue[700],
     light: import_colors.default.blue[600]
   },
   secondary: {
@@ -576,7 +576,7 @@ var LightPalette = {
     dark: import_colors.default.gray[300]
   },
   background: {
-    default: import_colors.default.white,
+    default: import_colors.default.gray[100],
     paper: import_colors.default.white
   },
   text: {
@@ -682,6 +682,12 @@ var theme = {
     MuiStepper: {
       defaultProps: {
         alternativeLabel: true
+      }
+    },
+    MuiPagination: {
+      defaultProps: {
+        shape: "rounded",
+        color: "primary"
       }
     }
   }
