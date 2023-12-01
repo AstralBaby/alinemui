@@ -66,12 +66,13 @@
 }
 
 
-.MuiCheckbox-root{
+.MuiRadio-root{
+    input {
+    }
     .MuiSvgIcon-root {
-        @apply fill-gray-300
     }
     &.Mui-checked .MuiSvgIcon-root{
-        @apply fill-primary
+        @apply stroke-2
     }
 }
 .MuiAutocomplete-root {

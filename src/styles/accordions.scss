@@ -1,0 +1,14 @@
+
+.MuiAccordion-root {
+    &.Mui-expanded {
+        @apply rounded-lg;
+        .MuiAccordionSummary-root .MuiTypography-body1 {
+            @apply font-medium
+        }
+    }
+    
+    &::before {
+        @apply bg-gray-100 dark:bg-neutral-700
+    }
+}
+

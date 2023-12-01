@@ -34,7 +34,7 @@ const LightPalette: ThemeOptions["palette"] = {
     },
     text: {
         primary: colors.gray[700],
-        secondary: colors.gray[600]
+        secondary: colors.gray[500]
     }
 } as const
 

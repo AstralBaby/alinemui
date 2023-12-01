@@ -7,6 +7,7 @@ import chokidar from "chokidar"
 
 const build = async () => {
     try {
+        console.log("Building")
         await esbuild.build({
             entryPoints: ['src/index.ts', 'src/index.scss'],
             format: "esm",
@@ -30,7 +31,7 @@ const build = async () => {
 }
 
 const watcher = chokidar.watch("./src/", {persistent: true, usePolling: false})
-console.log(".... Watching build ....")
+console.log(".... Watching changes ....")
 watcher.on("change", build)
 watcher.on("add", build)
 watcher.on("addDir", build)

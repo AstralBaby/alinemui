@@ -1,5 +1,10 @@
+.MuiDrawer-root {
+    .MuiListItem-button,.MuiListItemButton-root {
+        @apply px-5;
+    }
+}
 .MuiMenuItem-root {
-    @apply px-2;
+    // @apply px-5;
 }
 .MuiListItem-button,.MuiListItemButton-root {
     @apply px-2;
@@ -11,10 +16,11 @@
     @apply min-w-0 mr-3
 }
 .AlnListGroup {
+    @apply border-l-2 ml-2 border-gray-100 dark:border-gray-700;
     .MuiListItemButton-root {
         @apply pl-5;
         .MuiTypography-root {
-            @apply font-normal
+            // @apply font-normal
         }
     }
 }

@@ -582,7 +582,7 @@ var LightPalette = {
   },
   text: {
     primary: import_colors.default.gray[700],
-    secondary: import_colors.default.gray[600]
+    secondary: import_colors.default.gray[500]
   }
 };
 var DarkPalette = {
@@ -612,6 +612,7 @@ var DarkPalette = {
 import { ThemeProvider, createTheme as createTheme2 } from "@mui/material";
 
 // src/theme.ts
+import { darken, lighten } from "@mui/material";
 var theme = {
   typography: {
     fontFamily: ["Inter", "sans-serif"].join(","),
@@ -680,9 +681,41 @@ var theme = {
         notched: false
       }
     },
+    MuiCheckbox: {},
     MuiStepper: {
       defaultProps: {
         alternativeLabel: true
+      }
+    },
+    MuiStepConnector: {
+      defaultProps: {
+        alternativeLabel: {
+          top: 50
+        }
+      },
+      styleOverrides: {
+        root: ({ theme: theme2 }) => ({
+          "&.Mui-active": {
+            "& .MuiStepConnector-line": {
+              borderColor: theme2.palette.primary.main
+              // Change the color of the connector line when active
+            }
+          }
+        })
+      }
+    },
+    MuiStepIcon: {
+      styleOverrides: {
+        root: ({ theme: theme2 }) => ({
+          "&.Mui-active": {
+            borderColor: theme2.palette.primary.main,
+            // Change the color of the connector line when active
+            "--tw-ring-color": lighten(theme2.palette.primary.main, 0.7),
+            ":is(.dark &)": {
+              "--tw-ring-color": darken(theme2.palette.primary.main, 0.6)
+            }
+          }
+        })
       }
     },
     MuiPagination: {
@@ -690,7 +723,21 @@ var theme = {
         shape: "rounded",
         color: "primary"
       }
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: ({ theme: theme2 }) => ({
+          color: theme2.palette.text.secondary
+        })
+      }
     }
+    // MuiListItemText: {
+    //   styleOverrides: {
+    //     root: ({theme}) => ({
+    //       color: theme.palette.text.secondary
+    //     })
+    //   }
+    // }
   }
 };
 var theme_default = theme;

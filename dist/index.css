@@ -79,6 +79,10 @@
   border-width: 2px;
   text-transform: capitalize;
 }
+:is(.dark .MuiButton-text) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 .MuiButton-text:hover {
   background-color: rgb(107 114 128 / 0.1);
 }
@@ -290,11 +294,8 @@
 .dark .MuiInputBase-root:hover {
   background-color: rgb(255 255 255 / 0.1);
 }
-.MuiCheckbox-root .MuiSvgIcon-root {
-  fill: #d1d5db;
-}
-.MuiCheckbox-root.Mui-checked .MuiSvgIcon-root {
-  fill: #2563eb;
+.MuiRadio-root.Mui-checked .MuiSvgIcon-root {
+  stroke-width: 2;
 }
 .MuiAutocomplete-root .MuiOutlinedInput-root {
   padding: 0 9px 0;
@@ -336,9 +337,10 @@
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
-.MuiMenuItem-root {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.MuiDrawer-root .MuiListItem-button,
+.MuiDrawer-root .MuiListItemButton-root {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .MuiListItem-button,
 .MuiListItemButton-root {
@@ -352,11 +354,18 @@
   margin-right: 0.75rem;
   min-width: 0px;
 }
+.AlnListGroup {
+  margin-left: 0.5rem;
+  border-left-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+:is(.dark .AlnListGroup) {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
 .AlnListGroup .MuiListItemButton-root {
   padding-left: 1.25rem;
-}
-.AlnListGroup .MuiListItemButton-root .MuiTypography-root {
-  font-weight: 400;
 }
 .MuiTab-root {
   text-transform: capitalize;
@@ -381,12 +390,22 @@
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
+:is(.dark .MuiStepIcon-root) {
+  --tw-border-opacity: 1;
+  border-color: rgb(115 115 115 / var(--tw-border-opacity));
+}
 .MuiStepIcon-root:not([data-testid]) {
   fill: #fff;
+}
+:is(.dark .MuiStepIcon-root:not([data-testid])) {
+  fill: #737373;
 }
 .MuiStepIcon-root:not([data-testid]) text {
   fill: #6b7280;
   font-weight: 700;
+}
+:is(.dark .MuiStepIcon-root:not([data-testid]) text) {
+  fill: #f5f5f5;
 }
 .MuiStepLabel-iconContainer.Mui-active .MuiStepIcon-root {
   --tw-border-opacity: 1;
@@ -397,23 +416,19 @@
     var(--tw-ring-offset-shadow),
     var(--tw-ring-shadow),
     var(--tw-shadow, 0 0 #0000);
-  --tw-ring-color: rgb(37 99 235 / 0.3);
 }
 .MuiStepLabel-iconContainer.Mui-completed .MuiStepIcon-root {
   border-style: none;
 }
-.MuiStepConnector-root {
-  top: 15px;
-}
 .MuiStepConnector-root .MuiStepConnector-line {
   border-radius: 9999px;
-  border-width: 1px;
+  border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
-.MuiStepConnector-root.Mui-active .MuiStepConnector-line {
+:is(.dark .MuiStepConnector-root .MuiStepConnector-line) {
   --tw-border-opacity: 1;
-  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+  border-color: rgb(82 82 82 / var(--tw-border-opacity));
 }
 .MuiTableContainer-root {
   border-radius: 0.5rem;
@@ -478,7 +493,8 @@
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity));
-  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 :is(.dark .MuiDialog-container .MuiPaper-root .MuiDialogTitle-root) {
   --tw-border-opacity: 1;
@@ -740,4 +756,18 @@ a {
 }
 .MuiPagination-root .MuiPaginationItem-rounded {
   border-radius: 0.375rem;
+}
+.MuiAccordion-root.Mui-expanded {
+  border-radius: 0.5rem;
+}
+.MuiAccordion-root.Mui-expanded .MuiAccordionSummary-root .MuiTypography-body1 {
+  font-weight: 500;
+}
+.MuiAccordion-root::before {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+:is(.dark .MuiAccordion-root)::before {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
 }

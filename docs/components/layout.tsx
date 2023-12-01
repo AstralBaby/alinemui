@@ -43,7 +43,6 @@
             {pageOpts.pageMap.map(item => <ListElement item={item} meta={meta[item.name]} />)}
           </List>
           <Divider />
-
         </Box>
       </Drawer>
       <Box

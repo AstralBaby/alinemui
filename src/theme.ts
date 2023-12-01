@@ -1,3 +1,5 @@
+import { darken, hexToRgb, lighten } from "@mui/material";
+
 declare module '@mui/material/styles' {
   interface TypographyVariants {
     heading: React.CSSProperties;
@@ -108,9 +110,41 @@ const theme = {
         notched: false,
       },
     },
+    MuiCheckbox: {
+
+    },
     MuiStepper: {
       defaultProps: {
         alternativeLabel: true
+      },
+    },
+    MuiStepConnector: {
+      defaultProps: {
+        alternativeLabel: {
+          top: 50
+        }
+      },
+      styleOverrides: {
+        root: ({ theme }) => ({
+          "&.Mui-active": {
+            '& .MuiStepConnector-line': {
+              borderColor: theme.palette.primary.main // Change the color of the connector line when active
+            },
+          }
+        })
+      }
+    },
+    MuiStepIcon: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          "&.Mui-active": {
+            borderColor: theme.palette.primary.main, // Change the color of the connector line when active
+            "--tw-ring-color": lighten(theme.palette.primary.main, .7),
+            ":is(.dark &)": {
+              "--tw-ring-color": darken(theme.palette.primary.main, .6),
+            }
+          }
+        })
       }
     },
     MuiPagination: {
@@ -118,7 +152,21 @@ const theme = {
         shape: "rounded",
         color: "primary"
       }
-    }
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          color: theme.palette.text.secondary
+        })
+      }
+    },
+    // MuiListItemText: {
+    //   styleOverrides: {
+    //     root: ({theme}) => ({
+    //       color: theme.palette.text.secondary
+    //     })
+    //   }
+    // }
   }
 };
 

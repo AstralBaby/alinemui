@@ -16,6 +16,7 @@ Custom color support can be implemented using attr function and initial colors s
     }
     // variants
     &-text {
+        @apply dark:text-white;
         &:hover { @apply bg-gray-500/10 dark:bg-gray-300/10 }
         &Primary {
             //bg-primary
