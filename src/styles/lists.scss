@@ -4,13 +4,12 @@
     }
 }
 .MuiMenuItem-root {
-    // @apply px-5;
+    @apply p-2;
 }
 .MuiListItem-button,.MuiListItemButton-root {
-    @apply px-2;
+    @apply py-3;
 }
 .MuiListItemText-root .MuiTypography-root {
-    @apply font-medium
 }
 .MuiListItemIcon-root {
     @apply min-w-0 mr-3
