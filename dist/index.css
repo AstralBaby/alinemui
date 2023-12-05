@@ -342,13 +342,13 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
+.MuiMenuItem-root {
+  padding: 0.5rem;
+}
 .MuiListItem-button,
 .MuiListItemButton-root {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.MuiListItemText-root .MuiTypography-root {
-  font-weight: 500;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .MuiListItemIcon-root {
   margin-right: 0.75rem;
@@ -369,18 +369,10 @@
 }
 .MuiTab-root {
   text-transform: capitalize;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.MuiTab-root.Mui-selected {
-  --tw-text-opacity: 1;
-  color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 .MuiTabs-indicator {
-  height: 5px;
+  height: 3px;
   border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 .MuiStepIcon-root {
   border-radius: 9999px;

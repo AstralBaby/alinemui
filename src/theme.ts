@@ -1,4 +1,6 @@
 import { darken, hexToRgb, lighten } from "@mui/material";
+import defaultTailwind from "tailwindcss/defaultConfig"
+import resolveConfig from "tailwindcss/resolveConfig"
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
@@ -16,6 +18,10 @@ declare module '@mui/material/styles' {
     article?: React.CSSProperties;
     caption?: React.CSSProperties;
     blockquote?: React.CSSProperties;
+  }
+
+  interface TabsOwnProps {
+    variant: "contained"
   }
 }
 
@@ -41,6 +47,10 @@ declare module '@mui/material/Typography' {
 //     accent: true
 //   }
 // }
+
+
+const returnIf = (property: any, value: string, returns: any) => property === value && returns
+const {theme: tw} = resolveConfig(defaultTailwind)
 
 const theme = {
   typography: {
@@ -160,6 +170,26 @@ const theme = {
         })
       }
     },
+    MuiTabs: {
+      variants: [
+        {
+          props: { variant: "contained" }
+        },
+      ],
+      styleOverrides: {
+        indicator: ({ ownerState }) => returnIf(ownerState.variant, "contained", {display: "none"}),
+        flexContainer: ({ ownerState, theme }) => ({
+          "button": {
+            minHeight: 0,
+            "&.Mui-selected": returnIf(ownerState.variant, "contained", {
+              background: theme.palette.secondary.main,
+              borderRadius: tw.borderRadius['lg'],
+              minHeight: 0,
+            })
+          }
+        })
+      }
+    }
     // MuiListItemText: {
     //   styleOverrides: {
     //     root: ({theme}) => ({
