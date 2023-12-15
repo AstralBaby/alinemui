@@ -4360,7 +4360,7 @@ function Avatar(props) {
 }
 
 // src/useTheme.tsx
-import React3 from "react";
+import React5 from "react";
 import { useContext, useEffect, useMemo, useState as useState2 } from "react";
 
 // src/palette.ts
@@ -4468,6 +4468,18 @@ import { ThemeProvider, createTheme as createTheme2 } from "@mui/material";
 var import_defaultConfig = __toESM(require_defaultConfig());
 var import_resolveConfig = __toESM(require_resolveConfig2());
 import { darken, lighten } from "@mui/material";
+
+// src/assets/CheckedCheckbox.jsx
+import React3 from "react";
+import { SvgIcon } from "@mui/material";
+var CheckedCheckbox_default = () => /* @__PURE__ */ React3.createElement(SvgIcon, null, /* @__PURE__ */ React3.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ React3.createElement("path", { d: "M14.5 17H9.5C8 17 7 15.5 7 14.5V9.5C7 8.5 8 7 9.5 7H14.5C16 7 17 8.5 17 9.5V14.5C17 15.5 16 17 14.5 17ZM16 3H8C5 3 3 5.5 3 8V16C3 18.5 5 21 8 21H16C19 21 21 18.5 21 16V8C21 5.5 19 3 16 3Z" })));
+
+// src/assets/UncheckedBox.jsx
+import React4 from "react";
+import { SvgIcon as SvgIcon2 } from "@mui/material";
+var UncheckedBox_default = () => /* @__PURE__ */ React4.createElement(SvgIcon2, null, /* @__PURE__ */ React4.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ React4.createElement("rect", { x: "3", y: "3", width: "18", height: "18", rx: "5", fill: "#D9D9D9" })));
+
+// src/theme.ts
 var returnIf = (property, value, returns) => property === value && returns;
 var { theme: tw } = (0, import_resolveConfig.default)(import_defaultConfig.default);
 var theme = {
@@ -4533,12 +4545,32 @@ var theme = {
         disableUnderline: true
       }
     },
+    MuiTextField: {
+      defaultProps: {
+        InputLabelProps: {
+          shrink: true
+        }
+      }
+    },
     MuiOutlinedInput: {
       defaultProps: {
         notched: false
       }
     },
-    MuiCheckbox: {},
+    MuiSelect: {},
+    MuiCheckbox: {
+      defaultProps: {
+        icon: UncheckedBox_default(),
+        checkedIcon: CheckedCheckbox_default()
+      },
+      styleOverrides: {
+        root: ({ theme: theme2 }) => ({
+          "&.Mui-checked": {
+            fill: theme2.palette.primary.light
+          }
+        })
+      }
+    },
     MuiStepper: {
       defaultProps: {
         alternativeLabel: true
@@ -4608,6 +4640,20 @@ var theme = {
         })
       }
     }
+    // MuiRadio: {
+    //   defaultProps: {
+    //     checkedIcon: SelectedRadio()
+    //   },
+    //   styleOverrides: {
+    //     root: {
+    //       "&.Mui-checked": {
+    //         "svg": {
+    //           fill: "red"
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
     // MuiListItemText: {
     //   styleOverrides: {
     //     root: ({theme}) => ({
@@ -4642,7 +4688,7 @@ var AlineProvider = ({ children }) => {
     palette: mode === "dark" ? DarkPalette : LightPalette,
     ...theme_default
   }), [mode]);
-  return /* @__PURE__ */ React3.createElement(AlineContext.Provider, { value: { mode, setMode } }, /* @__PURE__ */ React3.createElement(ThemeProvider, { theme: theme2 }, children));
+  return /* @__PURE__ */ React5.createElement(AlineContext.Provider, { value: { mode, setMode } }, /* @__PURE__ */ React5.createElement(ThemeProvider, { theme: theme2 }, children));
 };
 export {
   AlineProvider,

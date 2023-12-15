@@ -1,21 +1,31 @@
-.MuiFormControl-root {
-    @apply align-middle
+.MuiFormControl-root.MuiTextField-root {
+    @apply align-middle;
+    &:has(.MuiOutlinedInput-root) {
+        @apply mt-7;
+        fieldset {
+            // FLOATING LABEL
+            legend span {
+                @apply hidden;
+            }
+    
+        }
+    }
 }
 .MuiInputLabel-root {
     @apply font-medium dark:text-gray-200;
     &.Mui-focused {
-        @apply text-gray-700 dark:text-white font-medium
+        @apply text-gray-800 dark:text-white font-medium
     }
 }
 .MuiInputLabel-outlined {
-    @apply transform-none -mt-6 text-sm 
+    @apply transform-none -mt-7 
 }
 
 .MuiInputBase-root {
-    @apply rounded-md shadow-sm leading-6;
+    @apply rounded-lg leading-6;
     fieldset {
         //shadow-slate-50
-        @apply border-gray-200 dark:border-neutral-500 border shadow-sm shadow-slate-50 dark:shadow-slate-900;
+        @apply border-gray-900/10 dark:border-neutral-500 border-2;
         legend span {
             @apply dark:text-white;
         }
@@ -26,19 +36,21 @@
             @apply border-primary;
         }
     }
-    &:hover,.MuiOutlinedInput-root:hover {
+    &:hover {
         // cual es la diferencia entre el base y el outline? evaluar.
-        &:hover{ @apply dark:bg-white/10 }
-        fieldset,.MuiOutlinedInput-notchedOutline {
-            @apply ring-2 ring-primary/60  dark:border-gray-400;
-            //border-gray-200
+        // &:hover{ @apply dark:bg-white/10 }
+
+        .MuiOutlinedInput-notchedOutline {
+            // @apply ring-2 ring-primary/60  ;
+            //border-gray-200 dark:border-gray-400
+            @apply border-gray-900/10 dark:border-neutral-500
         }
     }
     &.MuiOutlinedInput-root{
-        @apply ring-0 shadow-none outline-none
+        // @apply ring-0 shadow-none outline-none
     }
     &.MuiFilledInput-root{
-        @apply bg-gray-100 dark:bg-white/10;
+        @apply bg-neutral-700/5 dark:bg-white/10;
         .MuiFilledInput-input  {
         }
         @apply shadow-none
@@ -71,9 +83,9 @@
     }
     .MuiSvgIcon-root {
     }
-    &.Mui-checked .MuiSvgIcon-root{
-        @apply stroke-2
-    }
+    // &.Mui-checked .MuiSvgIcon-root{
+    //     @apply stroke-2
+    // }
 }
 .MuiAutocomplete-root {
     .MuiOutlinedInput-root {
@@ -82,8 +94,8 @@
 }
 
 // disable material label
-.MuiFormLabel-root[data-shrink=true] {
-}
+// .MuiFormLabel-root[data-shrink=true] {
+// }
 
 // ARIA
 .MuiAutocomplete-listbox .MuiAutocomplete-option[aria-selected="true"]{
@@ -100,9 +112,9 @@
     }
 }
 
-.quill {
-    @apply border border-gray-200 rounded-md;
-    &:focus-within { @apply ring-2 ring-primary }
-    .ql-container.ql-snow, .ql-toolbar.ql-snow { @apply border-none }
-    .ql-toolbar.ql-snow { @apply bg-slate-50 rounded-md }
-}
+// .quill {
+//     @apply border border-gray-200 rounded-md;
+//     &:focus-within { @apply ring-2 ring-primary }
+//     .ql-container.ql-snow, .ql-toolbar.ql-snow { @apply border-none }
+//     .ql-toolbar.ql-snow { @apply bg-slate-50 rounded-md }
+// }

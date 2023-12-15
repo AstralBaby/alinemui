@@ -1,6 +1,9 @@
 import { darken, hexToRgb, lighten } from "@mui/material";
 import defaultTailwind from "tailwindcss/defaultConfig"
 import resolveConfig from "tailwindcss/resolveConfig"
+import SelectedRadio from "./assets/SelectedRadio";
+import CheckedCheckbox from "./assets/CheckedCheckbox";
+import UncheckedBox from "./assets/UncheckedBox";
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
@@ -115,13 +118,33 @@ const theme = {
         disableUnderline: true,
       } 
     },
-    MuiOutlinedInput: {
+    MuiTextField: {
       defaultProps: {
-        notched: false,
+        InputLabelProps: {
+          shrink: true
+        }
       },
     },
-    MuiCheckbox: {
+    MuiOutlinedInput: {
+      defaultProps: {
+        notched: false
+      },
+    },
+    MuiSelect: {
 
+    },
+    MuiCheckbox: {
+      defaultProps: {
+        icon: UncheckedBox(),
+        checkedIcon: CheckedCheckbox()
+      },
+      styleOverrides: {
+        root: ({ theme }) => ({
+          "&.Mui-checked": {
+            fill: theme.palette.primary.light
+          }
+        })
+      }
     },
     MuiStepper: {
       defaultProps: {
@@ -189,7 +212,21 @@ const theme = {
           }
         })
       }
-    }
+    },
+    // MuiRadio: {
+    //   defaultProps: {
+    //     checkedIcon: SelectedRadio()
+    //   },
+    //   styleOverrides: {
+    //     root: {
+    //       "&.Mui-checked": {
+    //         "svg": {
+    //           fill: "red"
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
     // MuiListItemText: {
     //   styleOverrides: {
     //     root: ({theme}) => ({
