@@ -12,17 +12,20 @@
     }
 }
 .MuiInputLabel-root {
-    @apply font-medium dark:text-gray-200;
+    @apply font-medium text-gray-600 dark:text-neutral-200;
     &.Mui-focused {
-        @apply text-gray-800 dark:text-white font-medium
+        @apply text-primary dark:text-white
     }
 }
 .MuiInputLabel-outlined {
-    @apply transform-none -mt-7 
+    @apply transform-none -mt-7
 }
 
 .MuiInputBase-root {
     @apply rounded-lg leading-6;
+    svg {
+        @apply text-gray-900/25 dark:text-neutral-500 mr-1
+    }
     fieldset {
         //shadow-slate-50
         @apply border-gray-900/10 dark:border-neutral-500 border-2;
@@ -57,7 +60,7 @@
     }
     
     &.MuiInput-underline::before{
-        @apply border-b-2
+        @apply border-b-2 border-gray-900/30 dark:border-neutral-500
     }
 }
 

@@ -131,7 +131,9 @@ const theme = {
       },
     },
     MuiSelect: {
-
+      defaultProps: {
+        displayEmpty: true,
+      }
     },
     MuiCheckbox: {
       defaultProps: {

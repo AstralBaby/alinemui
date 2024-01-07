@@ -4557,7 +4557,11 @@ var theme = {
         notched: false
       }
     },
-    MuiSelect: {},
+    MuiSelect: {
+      defaultProps: {
+        displayEmpty: true
+      }
+    },
     MuiCheckbox: {
       defaultProps: {
         icon: UncheckedBox_default(),

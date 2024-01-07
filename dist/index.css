@@ -175,15 +175,16 @@
 }
 .MuiInputLabel-root {
   font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 :is(.dark .MuiInputLabel-root) {
   --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
+  color: rgb(229 229 229 / var(--tw-text-opacity));
 }
 .MuiInputLabel-root.Mui-focused {
-  font-weight: 500;
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 :is(.dark .MuiInputLabel-root.Mui-focused) {
   --tw-text-opacity: 1;
@@ -196,6 +197,14 @@
 .MuiInputBase-root {
   border-radius: 0.5rem;
   line-height: 1.5rem;
+}
+.MuiInputBase-root svg {
+  margin-right: 0.25rem;
+  color: rgb(17 24 39 / 0.25);
+}
+:is(.dark .MuiInputBase-root svg) {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 .MuiInputBase-root fieldset {
   border-width: 2px;
@@ -244,6 +253,11 @@
 }
 .MuiInputBase-root.MuiInput-underline::before {
   border-bottom-width: 2px;
+  border-color: rgb(17 24 39 / 0.3);
+}
+:is(.dark .MuiInputBase-root.MuiInput-underline)::before {
+  --tw-border-opacity: 1;
+  border-color: rgb(115 115 115 / var(--tw-border-opacity));
 }
 .dark .MuiInputBase-root:hover {
   background-color: rgb(255 255 255 / 0.1);
@@ -659,6 +673,30 @@ a {
   cursor: pointer;
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+.MuiPaper-root.MuiCard-root {
+  border-radius: 0.75rem;
+}
+.MuiPaper-root.MuiCard-root.MuiPaper-outlined {
+  border-width: 2px;
+  border-color: rgb(17 24 39 / 0.1);
+}
+.MuiPaper-root .MuiCardHeader-root {
+  padding: 1rem;
+  padding-bottom: 0px;
+}
+.MuiPaper-root .MuiCardActions-root {
+  padding: 1rem;
+  padding-top: 0px;
+}
+.MuiPaper-root .MuiCardContent-root {
+  padding: 1rem;
+}
+.MuiPaper-root .MuiCardHeader-content .MuiTypography-root {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 .MuiPaper-elevation {
   --tw-shadow: 0 0 #0000;
