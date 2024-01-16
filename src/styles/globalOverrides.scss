@@ -16,7 +16,7 @@ a { @apply text-sky-500 cursor-pointer }
 //     // &-root { @apply text-1 }
     &-root {
         &.MuiCard-root {
-            &.MuiPaper-outlined { @apply border-gray-900/10 border-2 }
+            &.MuiPaper-outlined { @apply border-gray-900/10 dark:border-white/10 border-2 }
             @apply rounded-xl
         }
         .MuiCardHeader-root {

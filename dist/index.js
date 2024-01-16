@@ -4421,28 +4421,31 @@ var { palette: { augmentColor } } = createTheme();
 var LightPalette = {
   mode: "light",
   primary: {
-    main: import_colors.default.blue[700],
-    light: import_colors.default.blue[600]
+    main: import_colors.default.blue[600],
+    light: import_colors.default.blue[500],
+    dark: import_colors.default.blue[700],
+    contrastText: import_colors.default.white
   },
   secondary: {
-    light: import_colors.default.gray[100],
-    main: import_colors.default.gray[200],
-    dark: import_colors.default.gray[300]
+    light: import_colors.default.zinc[100],
+    main: import_colors.default.zinc[200],
+    dark: import_colors.default.zinc[300]
   },
   background: {
-    default: import_colors.default.gray[100],
+    default: import_colors.default.zinc[100],
     paper: import_colors.default.white
   },
   text: {
-    primary: import_colors.default.gray[700],
-    secondary: import_colors.default.gray[500]
+    primary: import_colors.default.zinc[700],
+    secondary: import_colors.default.zinc[500]
   }
 };
 var DarkPalette = {
   mode: "dark",
   primary: {
-    main: import_colors.default.blue[600],
-    light: import_colors.default.blue[400],
+    main: import_colors.default.blue[400],
+    light: import_colors.default.blue[300],
+    dark: import_colors.default.blue[500],
     contrastText: import_colors.default.white
   },
   secondary: {
@@ -4453,7 +4456,7 @@ var DarkPalette = {
   },
   background: {
     default: import_colors.default.neutral[800],
-    paper: import_colors.default.neutral[800]
+    paper: import_colors.default.neutral[700]
   },
   text: {
     primary: import_colors.default.neutral[100],

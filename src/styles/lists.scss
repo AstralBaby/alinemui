@@ -1,10 +1,12 @@
+.MuiList-root { @apply py-0 }
 .MuiDrawer-root {
     .MuiListItem-button,.MuiListItemButton-root {
         @apply px-5;
     }
 }
 .MuiMenuItem-root {
-    @apply p-2;
+    @apply p-2 rounded-md;
+    &:hover { @apply bg-zinc-100 }
 }
 .MuiListItem-button,.MuiListItemButton-root {
     @apply py-3;

@@ -19,22 +19,24 @@ const createColor = (base: string) => augmentColor({ color: { main: base } });
 const LightPalette: ThemeOptions["palette"] = {
     mode: "light",
     primary: {
-        main: colors.blue[700],
-        light: colors.blue[600]
+        main: colors.blue[600],
+        light: colors.blue[500],
+        dark: colors.blue[700],
+        contrastText: colors.white
     },
     secondary: {
-        light: colors.gray[100],
-        main: colors.gray[200],
-        dark: colors.gray[300],
+        light: colors.zinc[100],
+        main: colors.zinc[200],
+        dark: colors.zinc[300],
     },
     background: {
-      default: colors.gray[100],
+      default: colors.zinc[100],
       paper: colors.white,
       
     },
     text: {
-        primary: colors.gray[700],
-        secondary: colors.gray[500]
+        primary: colors.zinc[700],
+        secondary: colors.zinc[500]
     }
 } as const
 
@@ -42,8 +44,9 @@ const LightPalette: ThemeOptions["palette"] = {
 const DarkPalette: ThemeOptions["palette"] = {
     mode: "dark",
     primary: {
-        main: colors.blue[600],
-        light: colors.blue[400],
+        main: colors.blue[400],
+        light: colors.blue[300],
+        dark: colors.blue[500],
         contrastText: colors.white
     },
     secondary: {
@@ -54,7 +57,7 @@ const DarkPalette: ThemeOptions["palette"] = {
     },
     background: {
       default: colors.neutral[800],
-      paper: colors.neutral[800],
+      paper: colors.neutral[700],
     },
     text: {
         primary: colors.neutral[100],

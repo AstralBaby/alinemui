@@ -1,13 +1,16 @@
   import type { NextraThemeLayoutProps, PageMapItem } from 'nextra'
-  import { AppBar, Box, Button, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, StyledEngineProvider, TextField, Toolbar, Typography } from "@mui/material"
+  import { AppBar, Box, Button, Checkbox, Divider, Drawer, Icon, List, ListItem, ListItemButton, ListItemIcon, ListItemText, StyledEngineProvider, TextField, Toolbar, Typography } from "@mui/material"
   import { ListGroup, useTheme } from "../../dist/index"
   import { useRouter } from 'next/router'
   import { MDXProvider } from 'nextra/mdx'
   import components from "nextra/components"
   import { useEffect, useState } from 'react'
-
+  import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
+  import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
+  import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+  
  export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
-  const { setMode } = useTheme()
+  const { setMode, mode } = useTheme()
 
   const meta = pageOpts.pageMap[pageOpts.pageMap.length - 1].data
 
@@ -25,8 +28,11 @@
           <Typography variant="h6" noWrap component="div" className="flex-grow">
             Aline
           </Typography>
-          <TextField type="search"></TextField>
-          <Button onClick={() => setMode(mode => mode === "light" ? "dark" : "light")}>Change theme</Button>
+          <Checkbox
+            checked={ mode === "light"}
+            checkedIcon={<DarkModeRoundedIcon htmlColor='white' />}
+            icon={<LightModeRoundedIcon />}
+            onClick={() => setMode(mode => mode === "light" ? "dark" : "light")}></Checkbox>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -40,7 +46,12 @@
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
-            {pageOpts.pageMap.map(item => <ListElement item={item} meta={meta[item.name]} />)}
+            <ListItem>
+              <TextField type="search" variant='outlined' placeholder='Search'></TextField>
+            </ListItem>
+            {pageOpts.pageMap.map(item =>
+              <ListElement item={item} meta={meta[item.name]} />
+            )}
           </List>
           <Divider />
         </Box>

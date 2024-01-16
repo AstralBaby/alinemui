@@ -1,7 +1,11 @@
 {
   "index": "Getting Started",
   "another": "Another Page",
-  "components": "Components",
+  "components": {
+    "title": "Components",
+    "icon": "autoawesome",
+    "type": "page"
+  },
   "about": {
     "title": "About",
     "type": "page"
